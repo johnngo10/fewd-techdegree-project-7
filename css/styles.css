@@ -1,3 +1,165 @@
+header {
+  grid-area: header;
+  background-color: slateblue;
+  color: white;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+}
+header h1 {
+  margin: auto 0;
+  padding-left: 2%;
+}
+header div {
+  display: flex;
+  justify-content: flex-end;
+}
+header div h3 {
+  margin: auto 0;
+}
+header .notication-bell {
+  width: 10%;
+}
+header img {
+  width: 20%;
+  padding: 0 0.5rem;
+}
+header .profile-pic {
+  border-radius: 50%;
+}
 
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  background-color: #595288;
+}
+nav img {
+  padding: 1rem;
+}
+nav a {
+  margin: 0 5%;
+}
+
+#traffic-chart {
+  background: url(https://source.unsplash.com/random) center center/cover;
+}
+
+#daily-chart {
+  background: url(https://source.unsplash.com/random) center center/cover;
+}
+
+#donut-chart {
+  background: url(https://source.unsplash.com/random) center center/cover;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "header" "nav" "main";
+}
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "header header" "nav main";
+  }
+}
+
+.main {
+  grid-area: main;
+  background-color: #f4f4f4;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+.main-header .headline {
+  margin: auto;
+}
+.main-header-search {
+  display: flex;
+  width: 65%;
+  background: #e7e7e7;
+  border-radius: 0 0 0 10px;
+  justify-content: flex-end;
+}
+.main-header-search input {
+  margin: auto 0;
+  width: 60%;
+  padding: 60px 0;
+  font-size: 25px;
+}
+.main .alert {
+  width: 95%;
+  height: 40px;
+  background-color: slateblue;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 50%;
+  }
+}
+
+.traffic {
+  width: 95%;
+  margin: auto;
+}
+.traffic-header {
+  display: flex;
+  justify-content: space-between;
+}
+.traffic-nav {
+  list-style: none;
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .traffic,
+.social {
+    grid-column: 1/span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .daily,
+.members,
+.message {
+    grid-column: 1/span 1;
+  }
+}
+
+.mobile,
+.activity,
+.settings {
+  grid-column: 2/span 1;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+}
+
+@media (min-width: 768px) {
+  .widget-container-full {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .widget-container-half {
+    width: 45vw;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

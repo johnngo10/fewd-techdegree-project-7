@@ -1,0 +1,29 @@
+header {
+  grid-area: header;
+  background-color: slateblue;
+  color: white;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  & h1 {
+    margin: auto 0;
+    padding-left: 2%;
+  }
+  & div {
+    display: flex;
+    justify-content: flex-end;
+    & h3 {
+      margin: auto 0;
+    }
+  }
+  & .notication-bell {
+    width: 10%;
+  }
+  & img {
+    width: 20%;
+    padding: 0 0.5rem;
+  }
+  & .profile-pic {
+    border-radius: 50%;
+  }
+}

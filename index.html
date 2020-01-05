@@ -6,19 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WebApp Dashboard</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
   </head>
-  <body>
+  <body class="grid-container">
     <header>
       <h1>WebApp</h1>
       <div>
-        <img
-          src="icons/icon-bell.svg"
-          alt="notification bell"
-          heigth="87"
-          width="100"
-        />
+        <img class="notification-bell" src="icons/icon-bell.svg" alt="notification bell" />
         <div id="notification"></div>
-        <img src="images/member-1.jpg" alt="profile picture" />
+        <img class="profile-pic" src="images/member-1.jpg" alt="profile picture" />
         <h3>John Doe</h3>
       </div>
     </header>
@@ -26,30 +22,24 @@
     <nav>
       <a href="#"
         ><img
-          src="icons/icon-dashboard.svg"
-          heigth="87"
-          width="100"
-          alt="Dashboard"
+          src="icons/icon-dashboard.svg" alt="Dashboard"
       /></a>
       <a href="#"
-        ><img src="icons/icon-members.svg" heigth="87" width="100" alt="members"
+        ><img src="icons/icon-members.svg" alt="members"
       /></a>
       <a href="#"
-        ><img src="icons/icon-visits.svg" heigth="87" width="100" alt="visits"
+        ><img src="icons/icon-visits.svg" alt="visits"
       /></a>
       <a href="#"
         ><img
-          src="icons/icon-settings.svg"
-          heigth="87"
-          width="100"
-          alt="settings"
+          src="icons/icon-settings.svg" alt="settings"
       /></a>
     </nav>
-    <main>
+    <main class="main">
       <div class="main-header">
         <h2 class="headline">Dashboard</h2>
         <div class="main-header-search">
-          <input type="search" placeholder="Search..." />
+          <input type="search" height="200px" placeholder="Search..." />
         </div>
       </div>
       <!-- alert banner -->
@@ -84,7 +74,7 @@
       </section>
 
       <!-- donut graph -->
-      <section class="donut">
+      <section class="mobile">
         <h3>Mobile Users</h3>
         <div class="widget-container-half">
           <!-- element donut graph will be attached to -->
@@ -277,6 +267,48 @@
       <!-- setting-widget -->
       <section class="settings">
         <h3>Settings</h3>
+
+        <!-- custom CSS toggle code -->
+        <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox">
+    
+            <strong>
+              Send Email Notifcations
+            </strong>
+          
+            <span>
+              <span>On</span>
+              <span>Off</span>
+              <a></a>
+            </span>
+          </label>
+
+        <label class="switch-light switch-candy" onclick="">
+            <input type="checkbox">
+    
+            <strong>
+              Set Profile to Public
+            </strong>
+          
+            <span>
+              <span>On</span>
+              <span>Off</span>
+              <a></a>
+            </span>
+          </label>
+        <!-- custom CSS toggle code -->
+
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+          <option>Pacific Time</option>
+          <option>Eastern Time</option>
+          <option>Central Time</option>
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>
+        </div>
+
       </section>
     </main>
   </body>

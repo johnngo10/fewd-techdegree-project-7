@@ -1,0 +1,12 @@
+nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(89, 82, 136);
+  & img {
+    padding: 1rem;
+  }
+  & a {
+    margin: 0 5%;
+  }
+}

@@ -9,4 +9,11 @@ nav {
   & a {
     margin: 0 5%;
   }
+  @include mq("med") {
+    display: block;
+    & img {
+      width: 98%;
+      padding: 15px;
+    }
+  }
 }

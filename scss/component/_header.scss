@@ -20,10 +20,16 @@ header {
     width: 10%;
   }
   & img {
-    width: 20%;
+    width: 15%;
     padding: 0 0.5rem;
   }
   & .profile-pic {
     border-radius: 50%;
+  }
+  @include mq("med") {
+    & img {
+      width: 13%;
+    }
+    grid-column: 1 / span 2;
   }
 }

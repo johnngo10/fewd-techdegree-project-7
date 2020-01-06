@@ -128,13 +128,20 @@ nav a {
     display: grid;
     grid-template-columns: 50%;
   }
+  .main-header-search {
+    width: 85%;
+  }
+  .main-header-search input {
+    width: 40%;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
 }
 
 .members {
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid lightgray;
-  border-right: 1px solid lightgray;
 }
 .members h3 {
   padding-bottom: 20px;
@@ -168,6 +175,11 @@ nav a {
 }
 .members-text div {
   padding: 0 10px;
+}
+@media (min-width: 768px) {
+  .members {
+    border-right: 1px solid lightgray;
+  }
 }
 
 .activity {
@@ -215,7 +227,6 @@ nav a {
   width: 100%;
   padding: 20px 0;
   border-bottom: 1px solid lightgray;
-  border-right: 1px solid lightgray;
 }
 .message h3 {
   padding-bottom: 20px;
@@ -258,6 +269,11 @@ nav a {
   color: white;
   font-size: 16px;
   border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .message {
+    border-right: 1px solid lightgray;
+  }
 }
 
 .settings {
@@ -306,6 +322,8 @@ nav a {
 
 @media (min-width: 768px) {
   .traffic,
+.main-header,
+.alert,
 .social-container {
     grid-column: 1/span 2;
   }
@@ -347,11 +365,6 @@ nav a {
   margin: auto;
   padding: 20px 0;
   border-bottom: 1px solid lightgray;
-}
-.social-container h3 {
-  padding-bottom: 20px;
-  width: 95%;
-  margin: auto;
 }
 .social-container .fb-container {
   display: flex;
@@ -403,6 +416,18 @@ nav a {
 .social-container .space {
   padding: 20px 0;
 }
+@media (min-width: 768px) {
+  .social-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.social h3 {
+  padding: 20px 0;
+  width: 95%;
+  margin: auto;
+}
 
 .traffic {
   width: 100%;
@@ -442,6 +467,11 @@ nav a {
 }
 .daily .widget-container-half {
   text-align: center;
+}
+@media (min-width: 768px) {
+  .daily {
+    border-right: 1px solid lightgray;
+  }
 }
 
 .mobile {

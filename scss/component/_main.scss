@@ -68,6 +68,14 @@
   @include mq("med") {
     display: grid;
     grid-template-columns: 50%;
+    &-header-search {
+      width: 85%;
+      & input {
+        width: 40%;
+        margin-right: 20px;
+        border-radius: 5px;
+      }
+    }
   }
 }
 
@@ -252,6 +260,8 @@
 }
 
 .traffic,
+.main-header,
+.alert,
 .social-container {
   @include mq("med") {
     grid-column: 1 / span 2;

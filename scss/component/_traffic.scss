@@ -36,6 +36,9 @@
   & .widget-container-half {
     text-align: center;
   }
+  @include mq("med") {
+    border-right: 1px solid lightgray;
+  }
 }
 
 .mobile {

@@ -3,11 +3,6 @@
   margin: auto;
   padding: 20px 0;
   border-bottom: 1px solid lightgray;
-  & h3 {
-    padding-bottom: 20px;
-    width: 95%;
-    margin: auto;
-  }
   & .fb-container {
     display: flex;
     width: 90%;
@@ -57,5 +52,17 @@
   }
   & .space {
     padding: 20px 0;
+  }
+  @include mq("med") {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.social {
+  & h3 {
+    padding: 20px 0;
+    width: 95%;
+    margin: auto;
   }
 }

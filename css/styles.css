@@ -255,7 +255,7 @@ nav a {
   margin: auto;
 }
 .settings-container .select-container {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 .settings-container .select-container #timezone {
   width: 100%;
@@ -264,6 +264,24 @@ nav a {
   border: none;
   border: 1px solid lightgray;
   background-color: #e7e7e7;
+}
+.settings-button {
+  display: flex;
+  justify-content: space-between;
+}
+.settings-button button {
+  width: 47%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+}
+.settings-button .button-primary {
+  background-color: slateblue;
+}
+.settings-button .button-disabled {
+  background-color: grey;
 }
 
 @media (min-width: 768px) {

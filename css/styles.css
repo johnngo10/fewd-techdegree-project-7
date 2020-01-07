@@ -58,18 +58,6 @@ nav a {
   }
 }
 
-#traffic-chart {
-  background: url(https://source.unsplash.com/random) center center/cover;
-}
-
-#daily-chart {
-  background: url(https://source.unsplash.com/random) center center/cover;
-}
-
-#donut-chart {
-  background: url(https://source.unsplash.com/random) center center/cover;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;

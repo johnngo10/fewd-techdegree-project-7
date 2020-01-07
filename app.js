@@ -2,6 +2,9 @@ const alertBanner = document.getElementById("alert");
 const trafficCanvas = document.getElementById("traffic-chart");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
+const userField = document.getElementById("userField");
+const messageField = document.getElementById("messageField");
+const send = document.getElementById("send");
 
 // alert banner
 alertBanner.innerHTML = `
@@ -112,3 +115,35 @@ const mobileData = {
     }
   ]
 };
+
+const mobileOptions = {
+  legend: {
+    position: "right",
+    labels: {
+      boxWidth: 20,
+      fontStyle: "bold"
+    }
+  }
+};
+
+let mobileChart = new Chart(mobileCanvas, {
+  type: "doughnut",
+  data: mobileData,
+  options: mobileOptions
+});
+
+// messaging
+send.addEventListener("click", e => {
+  if (userField.value === "") {
+    alert("Enter a user");
+    e.preventDefault();
+  } else if (messageField.value === "") {
+    alert("Enter a message");
+    e.preventDefault();
+  } else if (userField.value === "" && messageField.value === "") {
+    alert("Enter a user and a message");
+    e.preventDefault();
+  } else {
+    alert("Message was sent!");
+  }
+});

@@ -5,6 +5,17 @@ const mobileCanvas = document.getElementById("mobile-chart");
 const userField = document.getElementById("userField");
 const messageField = document.getElementById("messageField");
 const send = document.getElementById("send");
+const notification = document.getElementById("notification");
+const notificationBell = document.querySelector(".notification-bell");
+
+// notifications
+notificationBell.addEventListener("click", e => {
+  if (notification.style.display === "none") {
+    notification.style.display = "block";
+  } else if (notification.style.display !== "none") {
+    notification.style.display = "none";
+  }
+});
 
 // alert banner
 alertBanner.innerHTML = `

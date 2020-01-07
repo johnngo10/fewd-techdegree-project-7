@@ -20,12 +20,43 @@ header div h3 {
 header .notication-bell {
   width: 10%;
 }
+header .badge {
+  position: absolute;
+  right: 150px;
+  padding: 5px 5px;
+  border-radius: 50%;
+  background-color: #78cf82;
+}
+header #notification {
+  margin: 40px 0 0 0;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+header #notification a {
+  color: black;
+  background-color: #f4f4f4;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+header #notification a:hover {
+  background-color: lightgray;
+}
 header img {
   width: 15%;
   padding: 0 0.5rem;
+  transition: 0.3s;
+}
+header img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 header .profile-pic {
   border-radius: 50%;
+  border: none;
 }
 @media (min-width: 768px) {
   header {
@@ -62,6 +93,7 @@ nav a {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .grid-container {
@@ -355,6 +387,13 @@ nav a {
   }
 }
 
+.active {
+  background-color: #78cf82;
+  color: white;
+  border: 3px solid #78cf82;
+  border-radius: 10px;
+}
+
 .social-container {
   width: 100%;
   margin: auto;
@@ -442,7 +481,7 @@ nav a {
   display: flex;
 }
 .traffic-nav-link {
-  padding-left: 20px;
+  margin: 0 20px;
 }
 .traffic .widget-container-full {
   width: 100%;

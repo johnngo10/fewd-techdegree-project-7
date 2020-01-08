@@ -482,6 +482,7 @@ nav a {
 }
 .traffic-nav-link {
   margin: 0 20px;
+  cursor: pointer;
 }
 .traffic .widget-container-full {
   width: 100%;

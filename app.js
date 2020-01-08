@@ -7,6 +7,8 @@ const messageField = document.getElementById("messageField");
 const send = document.getElementById("send");
 const notification = document.getElementById("notification");
 const notificationBell = document.querySelector(".notification-bell");
+const trafficNav = document.querySelector(".traffic-nav");
+const trafficNavLinks = document.getElementsByClassName("traffic-nav-link");
 
 // notifications
 notificationBell.addEventListener("click", e => {
@@ -32,7 +34,27 @@ alertBanner.addEventListener("click", e => {
   }
 });
 
-// charts
+// traffic navs
+for (var i = 0; i < trafficNavLinks.length; i++) {
+  trafficNavLinks[i].addEventListener("click", e => {
+    let nav = e.target;
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    nav.className += " active";
+    // update data
+    if (nav.textContent === "Hourly") {
+      updateHourlyData();
+    } else if (nav.textContent === "Daily") {
+      updateDailyData();
+    } else if (nav.textContent === "Weekly") {
+      updateWeeklyData();
+    } else if (nav.textContent === "Monthly") {
+      updateMonthlyData();
+    }
+  });
+}
+
+// traffic chart
 
 let trafficData = {
   labels: [
@@ -82,6 +104,76 @@ let trafficChart = new Chart(trafficCanvas, {
   options: trafficOptions
 });
 
+// updating traffic chart
+function updateHourlyData() {
+  trafficChart.data.datasets[0].data = [
+    1000,
+    1750,
+    2250,
+    2000,
+    1500,
+    1500,
+    1850,
+    1850,
+    2250,
+    1500,
+    2500
+  ];
+  trafficChart.update();
+}
+
+function updateDailyData() {
+  trafficChart.data.datasets[0].data = [
+    2500,
+    1500,
+    2250,
+    1850,
+    2000,
+    750,
+    1000,
+    1400,
+    1200,
+    500,
+    2300
+  ];
+  trafficChart.update();
+}
+
+function updateWeeklyData() {
+  trafficChart.data.datasets[0].data = [
+    750,
+    1250,
+    1000,
+    2000,
+    1500,
+    1750,
+    1250,
+    1850,
+    2250,
+    1500,
+    2500
+  ];
+  trafficChart.update();
+}
+
+function updateMonthlyData() {
+  trafficChart.data.datasets[0].data = [
+    2500,
+    1500,
+    2250,
+    1850,
+    1250,
+    1750,
+    1500,
+    2000,
+    1000,
+    1250,
+    750
+  ];
+  trafficChart.update();
+}
+
+// daily chart
 const dailyData = {
   labels: ["S", "M", "T", "W", "T", "F", "S"],
   datasets: [
@@ -115,6 +207,7 @@ let dailyChart = new Chart(dailyCanvas, {
   options: dailyOptions
 });
 
+// mobile chart
 const mobileData = {
   labels: ["Desktop", "Tablet", "Phones"],
   datasets: [

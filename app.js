@@ -281,7 +281,6 @@ const switch1 = document.querySelector(".switch1");
 const switch2 = document.querySelector(".switch2");
 const save = document.getElementById("save");
 const cancel = document.getElementById("cancel");
-console.log(switch1);
 
 save.addEventListener("click", () => {
   if (timezone.value) {
@@ -293,6 +292,16 @@ save.addEventListener("click", () => {
   }
 });
 
+// for loading
+let timezoneVal = localStorage.getItem("timezone");
+let checked1 = JSON.parse(localStorage.getItem("switch1"));
+let checked2 = JSON.parse(localStorage.getItem("switch2"));
+
+timezone.value = timezoneVal;
+switch1.checked = checked1;
+switch2.checked = checked2;
+
+// Reset settings
 cancel.addEventListener("click", () => {
   location.reload();
   localStorage.clear();

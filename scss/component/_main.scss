@@ -254,6 +254,9 @@
       }
     }
   }
+  & .switch-light {
+    padding: 10px 0;
+  }
   &-button {
     display: flex;
     justify-content: space-between;
@@ -270,6 +273,15 @@
     }
     & .button-disabled {
       background-color: grey;
+    }
+  }
+  @include mq("med") {
+    & .switch-light {
+      display: flex;
+      padding: 10px;
+      & strong {
+        width: 130%;
+      }
     }
   }
 }

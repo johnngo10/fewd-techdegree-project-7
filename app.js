@@ -274,3 +274,27 @@ send.addEventListener("click", e => {
 //     }
 //   }
 // });
+
+// save settings to local storage
+const timezone = document.getElementById("timezone");
+const switch1 = document.querySelector(".switch1");
+const switch2 = document.querySelector(".switch2");
+const save = document.getElementById("save");
+const cancel = document.getElementById("cancel");
+console.log(switch1);
+
+save.addEventListener("click", () => {
+  if (timezone.value) {
+    localStorage.setItem("timezone", timezone.value);
+    localStorage.setItem("switch1", switch1.checked);
+    localStorage.setItem("switch2", switch2.checked);
+    window.alert("Your settings have been saved");
+    location.reload();
+  }
+});
+
+cancel.addEventListener("click", () => {
+  location.reload();
+  localStorage.clear();
+  window.alert("Your settings have been resetted");
+});

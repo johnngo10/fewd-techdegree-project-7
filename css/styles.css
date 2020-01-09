@@ -329,6 +329,9 @@ nav a {
   border: 1px solid lightgray;
   background-color: #e7e7e7;
 }
+.settings .switch-light {
+  padding: 10px 0;
+}
 .settings-button {
   display: flex;
   justify-content: space-between;
@@ -346,6 +349,15 @@ nav a {
 }
 .settings-button .button-disabled {
   background-color: grey;
+}
+@media (min-width: 768px) {
+  .settings .switch-light {
+    display: flex;
+    padding: 10px;
+  }
+  .settings .switch-light strong {
+    width: 130%;
+  }
 }
 
 @media (min-width: 768px) {

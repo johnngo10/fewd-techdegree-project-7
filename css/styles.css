@@ -291,6 +291,7 @@ nav a {
 }
 .message-container button {
   padding: 15px 0;
+  width: 100%;
   border: none;
   background-color: slateblue;
   color: white;
@@ -392,6 +393,10 @@ nav a {
   color: white;
   border: 3px solid #78cf82;
   border-radius: 10px;
+}
+
+.show {
+  display: block;
 }
 
 .social-container {

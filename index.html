@@ -303,8 +303,23 @@
               placeholder="Search for User"
               class="form-field"
               id="userField"
+              autocomplete="off"
+              list="names"
             />
-          </div>
+            <datalist id="names">
+              <option value="Victoria Chambers">
+                <option value="Dale Byrd">
+                <option value="Dawn Wood">
+                <option value="Dan Oliver">
+            </datalist>
+
+            <!-- <div id="autoUser" class="">
+              <a href="#" class="users">Victoria Chambers</a>
+              <a href="#" class="users">Dale Byrd</a>
+              <a href="#" class="users">Dawn Wood</a>
+              <a href="#" class="users">Dan Oliver</a>
+            </div>
+          </div> -->
           <div class="textarea-container">
             <textarea
               id="messageField"

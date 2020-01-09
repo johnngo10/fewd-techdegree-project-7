@@ -9,6 +9,8 @@ const notification = document.getElementById("notification");
 const notificationBell = document.querySelector(".notification-bell");
 const trafficNav = document.querySelector(".traffic-nav");
 const trafficNavLinks = document.getElementsByClassName("traffic-nav-link");
+const autoUser = document.getElementById("autoUser");
+const users = document.getElementsByClassName("users");
 
 // notifications
 notificationBell.addEventListener("click", e => {
@@ -251,3 +253,24 @@ send.addEventListener("click", e => {
     alert("Message was sent!");
   }
 });
+
+// autocomplete search
+
+// userField.addEventListener("input", e => {
+//   let search = e.target.value.toLowerCase();
+//   if (userField.value.length > 0) {
+//     autoUser.style.display = "block";
+//   } else if (userField.value.length === 0) {
+//     autoUser.style.display = "none";
+//   }
+
+//   for (let i = 0; i < users.length; i++) {
+//     let name = users[i].textContent.toLowerCase();
+//     if (search.indexOf(name[i]) === -1) {
+//       console.log(search);
+//       users[i].style.display = "none";
+//     } else if (search.indexOf(name[i]) > -1) {
+//       users[i].style.display = "block";
+//     }
+//   }
+// });

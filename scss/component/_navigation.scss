@@ -9,7 +9,7 @@ nav {
   & a {
     margin: 0 5%;
   }
-  @include mq("med") {
+  @include mq("lg") {
     display: block;
     & img {
       width: 98%;

@@ -13,7 +13,7 @@
     "header"
     "nav"
     "main";
-  @include mq("med") {
+  @include mq("lg") {
     grid-template-columns: 55px 1fr;
     grid-template-areas:
       "header header"
@@ -61,7 +61,7 @@
       color: white;
     }
   }
-  @include mq("med") {
+  @include mq("lg") {
     display: grid;
     grid-template-columns: 50%;
     &-header-search {
@@ -112,7 +112,7 @@
       padding: 0 10px;
     }
   }
-  @include mq("med") {
+  @include mq("lg") {
     border-right: 1px solid lightgray;
   }
 }
@@ -135,7 +135,8 @@
     border-bottom: 1px solid lightgray;
     justify-content: space-between;
     & img {
-      width: 8%;
+      height: auto;
+      max-width: 10%;
       border-radius: 50%;
     }
     & a {
@@ -153,6 +154,11 @@
     display: flex;
     & div {
       padding: 0 10px;
+    }
+  }
+  @include mq("lg") {
+    & img {
+      max-width: 7%;
     }
   }
 }
@@ -225,7 +231,7 @@
       border-radius: 5px;
     }
   }
-  @include mq("med") {
+  @include mq("lg") {
     border-right: 1px solid lightgray;
   }
 }
@@ -275,7 +281,7 @@
       background-color: grey;
     }
   }
-  @include mq("med") {
+  @include mq("lg") {
     & .switch-light {
       display: flex;
       padding: 10px;
@@ -290,7 +296,7 @@
 .main-header,
 .alert,
 .social-container {
-  @include mq("med") {
+  @include mq("lg") {
     grid-column: 1 / span 2;
   }
 }
@@ -298,7 +304,7 @@
 .daily,
 .members,
 .message {
-  @include mq("med") {
+  @include mq("lg") {
     grid-column: 1 / span 1;
   }
 }
@@ -315,13 +321,13 @@
 }
 
 .widget-container-full {
-  @include mq("med") {
+  @include mq("lg") {
     width: 90vw;
   }
 }
 
 .widget-container-half {
-  @include mq("med") {
+  @include mq("lg") {
     width: 45vw;
   }
 }

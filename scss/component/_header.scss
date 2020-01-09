@@ -57,7 +57,7 @@ header {
     border-radius: 50%;
     border: none;
   }
-  @include mq("med") {
+  @include mq("lg") {
     & img {
       width: 13%;
     }

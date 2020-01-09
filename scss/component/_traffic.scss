@@ -37,7 +37,7 @@
   & .widget-container-half {
     text-align: center;
   }
-  @include mq("med") {
+  @include mq("lg") {
     border-right: 1px solid lightgray;
   }
 }

@@ -58,7 +58,7 @@ header .profile-pic {
   border-radius: 50%;
   border: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header {
     grid-column: 1/span 2;
   }
@@ -79,7 +79,7 @@ nav img {
 nav a {
   margin: 0 5%;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   nav {
     display: block;
   }
@@ -102,7 +102,7 @@ nav a {
   grid-template-rows: auto;
   grid-template-areas: "header" "nav" "main";
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .grid-container {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "nav main";
@@ -150,7 +150,7 @@ nav a {
   padding: 10px;
   color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .main {
     display: grid;
     grid-template-columns: 50%;
@@ -203,7 +203,7 @@ nav a {
 .members-text div {
   padding: 0 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .members {
     border-right: 1px solid lightgray;
   }
@@ -229,7 +229,8 @@ nav a {
   justify-content: space-between;
 }
 .activity-container img {
-  width: 8%;
+  height: auto;
+  max-width: 10%;
   border-radius: 50%;
 }
 .activity-container a {
@@ -247,6 +248,11 @@ nav a {
 }
 .activity-text div {
   padding: 0 10px;
+}
+@media (min-width: 992px) {
+  .activity img {
+    max-width: 7%;
+  }
 }
 
 .message {
@@ -298,7 +304,7 @@ nav a {
   font-size: 16px;
   border-radius: 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .message {
     border-right: 1px solid lightgray;
   }
@@ -350,7 +356,7 @@ nav a {
 .settings-button .button-disabled {
   background-color: grey;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .settings .switch-light {
     display: flex;
     padding: 10px;
@@ -360,7 +366,7 @@ nav a {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .traffic,
 .main-header,
 .alert,
@@ -369,7 +375,7 @@ nav a {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .daily,
 .members,
 .message {
@@ -388,13 +394,13 @@ nav a {
   width: 95vw;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .widget-container-full {
     width: 90vw;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .widget-container-half {
     width: 45vw;
   }
@@ -467,7 +473,7 @@ nav a {
 .social-container .space {
   padding: 20px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .social-container {
     display: flex;
     justify-content: space-evenly;
@@ -520,7 +526,7 @@ nav a {
 .daily .widget-container-half {
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .daily {
     border-right: 1px solid lightgray;
   }

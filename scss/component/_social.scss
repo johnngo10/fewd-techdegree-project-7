@@ -53,6 +53,10 @@
   & .space {
     padding: 20px 0;
   }
+  @include mq("med") {
+    display: flex;
+    justify-content: space-evenly;
+  }
   @include mq("lg") {
     display: flex;
     justify-content: space-evenly;

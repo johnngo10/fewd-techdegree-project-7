@@ -285,6 +285,15 @@ canvas {
       background-color: grey;
     }
   }
+  @include mq("med") {
+    & .switch-light {
+      display: flex;
+      padding: 10px;
+      & strong {
+        width: 130%;
+      }
+    }
+  }
   @include mq("lg") {
     & .switch-light {
       display: flex;

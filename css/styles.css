@@ -58,7 +58,7 @@ header .profile-pic {
   border-radius: 50%;
   border: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header {
     grid-column: 1/span 2;
   }
@@ -79,7 +79,7 @@ nav img {
 nav a {
   margin: 0 5%;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   nav {
     display: block;
   }
@@ -106,7 +106,7 @@ canvas {
   grid-template-rows: auto;
   grid-template-areas: "header" "nav" "main";
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .grid-container {
     grid-template-columns: 55px 1fr;
     grid-template-areas: "header header" "nav main";
@@ -154,7 +154,7 @@ canvas {
   padding: 10px;
   color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .main {
     display: grid;
     grid-template-columns: 50%;
@@ -207,7 +207,7 @@ canvas {
 .members-text div {
   padding: 0 10px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .members {
     border-right: 1px solid lightgray;
   }
@@ -253,7 +253,7 @@ canvas {
 .activity-text div {
   padding: 0 10px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .activity img {
     max-width: 7%;
   }
@@ -308,7 +308,7 @@ canvas {
   font-size: 16px;
   border-radius: 5px;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .message {
     border-right: 1px solid lightgray;
   }
@@ -360,7 +360,16 @@ canvas {
 .settings-button .button-disabled {
   background-color: grey;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .settings .switch-light {
+    display: flex;
+    padding: 10px;
+  }
+  .settings .switch-light strong {
+    width: 130%;
+  }
+}
+@media (min-width: 1024px) {
   .settings .switch-light {
     display: flex;
     padding: 10px;
@@ -370,7 +379,7 @@ canvas {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .traffic,
 .main-header,
 .alert,
@@ -379,7 +388,7 @@ canvas {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .daily,
 .members,
 .message {
@@ -398,13 +407,13 @@ canvas {
   width: 95vw;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .widget-container-full {
     width: 90vw;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .widget-container-half {
     width: 45vw;
   }
@@ -477,7 +486,13 @@ canvas {
 .social-container .space {
   padding: 20px 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .social-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1024px) {
   .social-container {
     display: flex;
     justify-content: space-evenly;
@@ -530,7 +545,7 @@ canvas {
 .daily .widget-container-half {
   text-align: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .daily {
     border-right: 1px solid lightgray;
   }

@@ -284,7 +284,7 @@ const cancel = document.getElementById("cancel");
 
 save.addEventListener("click", () => {
   if (timezone.value) {
-    localStorage.setItem("timezone", timezone.value);
+    localStorage.setItem("timezone", timezone.selectedIndex);
     localStorage.setItem("switch1", switch1.checked);
     localStorage.setItem("switch2", switch2.checked);
     window.alert("Your settings have been saved");
@@ -297,7 +297,7 @@ let timezoneVal = localStorage.getItem("timezone");
 let checked1 = JSON.parse(localStorage.getItem("switch1"));
 let checked2 = JSON.parse(localStorage.getItem("switch2"));
 
-timezone.value = timezoneVal;
+timezone.selectedIndex = timezoneVal;
 switch1.checked = checked1;
 switch2.checked = checked2;
 
